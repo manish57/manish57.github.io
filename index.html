@@ -1,93 +1,213 @@
 <!DOCTYPE html>
-<html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+<html lang="en">
 
-.bgimg {
-  background-image: linear-gradient(rgba(56, 70, 77, 0.3), rgba(56, 70, 77, 0.3)), url('./img/farm-min.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+<head>
+    <link rel="stylesheet" type="text/css" href="/Vendor/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/Vendor/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="/resources/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <title>New Life Pharma</title>
 
-.topRight {
-  position: absolute;
-  top: 0;
-  right: 0px;
-}
+</head>
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
-}
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
 <body>
+    <header id="home"> 
+        <nav>
+            <div class="row">
+                <img src="/resources/Images/LogoWhite.png" alt="New life" class="logo">
+                <ul class="main-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#aboutUs">About us</a></li>
+                    <li><a href="#contactUs">Contact us</a></li>
 
-<div class="bgimg">
-  <div class="topRight">
-    <img src="img/logo.png" width="550" height="400" style="margin-top: -85px;">
-  </div>
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-    <p id="demo" style="font-size:30px"></p>
-  </div>
-  <div class="bottomleft">
-    <p>Get Ready! Something really cool is coming!</p>
-  </div>
-</div>
+                </ul>
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 30, 2022 15:37:25").getTime();
+            </div>
+        </nav>
 
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
+        <div class="hero-text-box">
+            <h1>Life will shine when crops will grow</h1>
 
-  // Get todays date and time
-  var now = new Date().getTime();
-  
-  // Find the distance between now an the count down date
-  var distance = countDownDate - now;
-  
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
+        </div>
+    </header>
+
+    <section class="section-feature" style="background-color: #dfe4ea;">
+        <div class="row">
+            <h2>Get Quality Fertilizer</h2>
+            <p class="long-copy">
+                Water-soluble fertilizers are made to dissolve into water. Because they are easily broken down, they are
+                fast-acting – your plants will have an immediate boost in nutrients. There's also a reduced likelihood
+                of over-fertilization, as water-soluble fertilizers can be applied more frequently.
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col span-1-of-3 box">
+                <ion-icon name="nutrition" size="large"></ion-icon>
+                <h3>Micronutition</h3>
+                <p>New Life Pharma Offer Quality Micronutrients (Sulphate & Chelated) like Zinc, Magnesium, Copper,
+                    Manganese, Boron, Ferrous, Molybdenum etc…which are essential elements required by all plants for
+                    better growth.</p>
+            </div>
+            <div class="col span-1-of-3 box">
+                <img src="/resources/Images/logo-firebase.svg" alt="fire" height="30px" width="30px">
+                <h3>NPK - Water Soluble Fertilizer</h3>
+                <p>New Life Pharma offer wide range of International FCO Grade Water Soluble Fertilizers covers the
+                    entire range of plant nutrients required for optimal plant nutrition.</p>
+            </div>
+            <div class="col span-1-of-3 box">
+                <ion-icon name="leaf" size="large"></ion-icon>
+                <h3>Plant Growth Promoters</h3>
+                <p>
+                    New Life Pharama offer New Generation Plant Growth Promoters & Hormones which are suitable for all
+                    crops for healthy and fruitfull growth.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-products" id="products">
+        <div class="row">
+            <h2>Products</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3 box">
+                <img src="/resources/Images/AmmPho.png" alt="1">
+                <h3>Mono Ammonium Phospate</h3>
+                <h3>N:P:K 12:61:00</h3>
+            </div>
+                            
+            <div class="col span-1-of-3 box">
+                <img src="/resources/Images/PotSul.png" alt="2">
+                <h3>Potassium Sulphate</h3>
+                <h3>N:P:K 00:00:50</h3>
+            </div>
+
+            <div class="col span-1-of-3 box">
+                <img src="/resources/Images/CalNit.png" alt="3">
+                <h3>Calcium Nitrate</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3 box">
+                <img src="/resources/Images/Npk191919.png" alt="4">
+                <h3>N:P:K 19:19:19</h3>
+            </div>
+
+            <div class="col span-1-of-3 box">
+                <img src="/resources/Images/Npk134013.png" alt="5">
+                <h3>N:P:K 13:40:13</h3>
+            </div>
+
+            <div class="col span-1-of-3 box">
+                <img src="/resources/Images/PotPho.png" alt="6">
+                <h3>Mono Potassium Phospate</h3>
+                <h3>N:P:K 00:52:34</h3>
+            </div>
+        </div>
+        <a class="button" href="https://drive.google.com/file/d/1bieTK_lqRTKN-uKNlHAD81y3HpKqYPez/view"><strong>For More Product Information. Click Here !!!</strong></a>
+    </section>
+
+    <section class="section-form" id="aboutUs" style="background-color: #dfe4ea;">
+        <div class="row">
+            <h2>About Us</h2>
+        </div>
+        <div class="row">
+            <div class="long-copy">After successful 9+ years of Mexican fertilisers our company is venturing into
+                importing water soluble fertilisers as 'New Life Smart Grow Fertilisers' With New Life
+                Smart Grow Fertilisers our aim is to provide fertilisers smart and sustainable agri
+                solutions for your farm needs. Our group is known for its hard work, expertise and
+                has been consistent in upgrading its systems in line with time and technological
+                developments.</div>
+            <div>
+        </div>
+
+        <div class="row">
+            <div class="col span-1-of-3 box">
+                <ion-icon name="eye" size="large"></ion-icon>
+                <h3>Vision: </h3>
+                <p>Our vision is to provide the best quality fertilisers that shall nuture crops and yield a health harvest.</p>
+            </div>
+            <div class="col span-1-of-3 box">
+                <ion-icon name="radio-button-on" size="large"></ion-icon>
+                <h3>Mission: </h3>
+                <p>Our mission is to provide smart agro solutions to new age of farming with our sustainable solutions.</p>
+            </div>
+            <div class="col span-1-of-3 box">
+                <ion-icon name="help" size="large"></ion-icon>
+                <h3>Why Us: </h3>
+                <p>With New life smart grow fertilisers you can harvet worry free, with our fertilisers that not only ensure a bumper harvest but also strengthens the roots and nurtures your land.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-form" id="contactUs">
+        <div class="row">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="row long-copy">
+            <div>
+            <strong>Corporate Office : </strong>
+            Office No. 304, Third Floor, Silver Mist,
+            Sadashiv Peth, Near- Neelayam Cinema.
+            Pune, 411030 Maharashtra India.
+            E-mail- newlifefertiliser@gmail.com
+            </div>
+            <div style="margin-top: 20px;">
+            <strong>Warehouses : </strong>
+            Godown no.01 Build. No. 13, Parasnath
+            Complex, ovali. Village-Ovali
+            Taluka- Bhiwandi Dist- Thane, Maharshtra.
+            </div>
+            <div style="margin-top: 20px;">
+            Plot no. 198/3 GIDC Phase 2, Vapi. Opp-Old
+            Vapi Paper Mill Taluka- Vapi, Dist- Valsad
+            Gujrat - 396195.
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="row">
+            <div class="col spam-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#aboutUs">About us</a></li>                    
+                    <li><a href="#contactUs">Contact us</a></li>
+
+                </ul>
+
+            </div>
+            <div class="col spam-1-of-2" style="float: right;position: relative;">
+                <ul class="social-link">
+                    <li><a href="#"><img src="/resources/Images/logo-facebook.svg" alt="fb" style="position: absolute;top: 0%;left: -20%;"></a></li>
+                    <li><a href="#"><ion-icon name="logo-twitter" size="small"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-google" size="small"></ion-icon></a></li>
+                    <li><a href="#"><ion-icon name="logo-instagram" size="small"></ion-icon></a></li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <p>
+                copyright &copy; 2022 by New Life Pharama. All right reserved.
+            </p>
+
+        </div>
+    </footer>
+
 
 </body>
+
 </html>
